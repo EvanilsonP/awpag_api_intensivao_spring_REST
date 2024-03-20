@@ -10,12 +10,15 @@ import java.util.List;
 
 @RestController
 public class ClienteController {
+    public ClienteController(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
 
-    @Autowired
     private ClienteRepository clienteRepository;
 
     @GetMapping("/clientes")
     public List<Cliente> listar() {
-        return clienteRepository.findAll();
+        return clienteRepository.findByNomeContaining("a");
+        // return clienteRepository.findByNome("Evan");
     }
 }
