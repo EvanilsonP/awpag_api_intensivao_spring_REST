@@ -1,4 +1,4 @@
-package com.algaworks.awpag.domain.model;
+package com.algaworks.awpag.model;
 import jakarta.persistence.*;
 
 import lombok.EqualsAndHashCode;
